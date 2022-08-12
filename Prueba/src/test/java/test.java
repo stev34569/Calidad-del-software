@@ -50,22 +50,24 @@ public class test {
      btnbuscar.click();
      Thread.sleep(1500);
      
+    
      
      driver.findElement(registerLinkLocator).click();
+
      Thread.sleep(2000);
-     driver.findElement(registerMedicosLinkLocator).click();
+     driver.findElement(registerEnfermerasLinkLocator).click();
      Thread.sleep(2000);
      WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtNroDocumento"));
-     buscar2.sendKeys("11855010");
+     buscar2.sendKeys("11514766");
      Thread.sleep(2000);
      WebElement buscar3 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtNombres"));
-     buscar3.sendKeys("david");
+     buscar3.sendKeys("daniela");
      Thread.sleep(2000);
      WebElement buscar4 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtApPaterno"));
-     buscar4.sendKeys("soto");
+     buscar4.sendKeys("castro");
      Thread.sleep(1000);
      WebElement buscar5 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtApMaterno"));
-     buscar5.sendKeys("vargas");
+     buscar5.sendKeys("mora");
      Thread.sleep(1000);
      WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnRegistrar"));
      buscar11.click();
