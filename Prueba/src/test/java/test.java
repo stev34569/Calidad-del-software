@@ -41,16 +41,35 @@ public class test {
 
 @Test
     public void testGooglepage() throws InterruptedException {
-        WebElement buscar = driver.findElement(By.name("LoginUser$UserName"));
-        buscar.sendKeys("security");
-        WebElement buscar1 = driver.findElement(By.name("LoginUser$Password"));
-        buscar1.sendKeys("security");
-        Thread.sleep(1500);
-        WebElement btnbuscar = driver.findElement(By.name("LoginUser$btnIngresar"));
-        btnbuscar.click();
-        Thread.sleep(1500);
-        
-    ;
+	 WebElement buscar = driver.findElement(By.name("LoginUser$UserName"));
+     buscar.sendKeys("security");
+     WebElement buscar1 = driver.findElement(By.name("LoginUser$Password"));
+     buscar1.sendKeys("security");
+     Thread.sleep(1500);
+     WebElement btnbuscar = driver.findElement(By.name("LoginUser$btnIngresar"));
+     btnbuscar.click();
+     Thread.sleep(1500);
+     
+     
+     driver.findElement(registerLinkLocator).click();
+     Thread.sleep(2000);
+     driver.findElement(registerMedicosLinkLocator).click();
+     Thread.sleep(2000);
+     WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtNroDocumento"));
+     buscar2.sendKeys("11855010");
+     Thread.sleep(2000);
+     WebElement buscar3 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtNombres"));
+     buscar3.sendKeys("david");
+     Thread.sleep(2000);
+     WebElement buscar4 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtApPaterno"));
+     buscar4.sendKeys("soto");
+     Thread.sleep(1000);
+     WebElement buscar5 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtApMaterno"));
+     buscar5.sendKeys("vargas");
+     Thread.sleep(1000);
+     WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnRegistrar"));
+     buscar11.click();
+     Thread.sleep(1000);
         
         
     }
