@@ -49,22 +49,53 @@ public class test {
         WebElement btnbuscar = driver.findElement(By.name("LoginUser$btnIngresar"));
         btnbuscar.click();
         Thread.sleep(1500);   
-        driver.findElement(registerAtencióndeCitasLinkLocator).click();
-        Thread.sleep(2000);
-        WebElement buscar8 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$dlAtencionMedica$ctl00$btnAtencion"));
-        buscar8.click();
-        Thread.sleep(2000);
-        WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtDiagnostico"));
-        buscar2.sendKeys("Presenta huesos fracturados");
-        Thread.sleep(2000);
-        WebElement buscar10 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtObservaciones"));
-        buscar10.sendKeys("Paracetamol");
-        Thread.sleep(2000);
-        WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnRegistrar"));
-        buscar11.click();
-        Thread.sleep(1000);
+        
+        driver.findElement(HoraiosLinkLocator).click();
+
+    	Thread.sleep(2000);
+    	
+    	driver.findElement(registerHorariosMedicosLinkLocator).click();
+    	Thread.sleep(2000);
+    	
+    	
+    	Thread.sleep(2000);
+    	
+    	WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtDNI"));
+
+    	buscar2.sendKeys("11855010");
+    	
+    	Thread.sleep(2000);
+    	
+    	WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnBuscar"));
+
+    	buscar11.click();
+    	
+    	Thread.sleep(1000);
+    	
+    	driver.findElement(registerAgregarHorarioLinkLocator).click();
+
+    	Thread.sleep(2000);
+    	WebElement buscar6 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtFecha"));
+
+    	buscar6.sendKeys("1272020");
+    	Thread.sleep(2000);
+    	
+    	WebElement buscar8 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtHoraInicio"));
+    	buscar8.clear();
+    	
+    	Thread.sleep(2000);
+    	
+    	buscar8.sendKeys("10:00");
+    	Thread.sleep(2000);
+    	
+    	WebElement buscar13 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnAgregar"));
+
+    	buscar13.click();
         
     }
+   
+        
+    
     @After
     public void turdown() {
         driver.quit();
