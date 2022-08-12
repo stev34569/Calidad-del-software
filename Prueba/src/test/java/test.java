@@ -39,7 +39,6 @@ public class test {
 	}
 	
 
-
 	@Test
     public void testGooglepage() throws InterruptedException {
         WebElement buscar = driver.findElement(By.name("LoginUser$UserName"));
@@ -49,32 +48,21 @@ public class test {
         Thread.sleep(1500);
         WebElement btnbuscar = driver.findElement(By.name("LoginUser$btnIngresar"));
         btnbuscar.click();
-        Thread.sleep(1500); 
-        driver.findElement(registerReservadeCitasLinkLocator).click();
+        Thread.sleep(1500);   
+        driver.findElement(registerAtencióndeCitasLinkLocator).click();
         Thread.sleep(2000);
-        WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtDNI"));
-        buscar2.sendKeys("11799080");
+        WebElement buscar8 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$dlAtencionMedica$ctl00$btnAtencion"));
+        buscar8.click();
         Thread.sleep(2000);
-        WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnBuscar"));
+        WebElement buscar2 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtDiagnostico"));
+        buscar2.sendKeys("Presenta huesos fracturados");
+        Thread.sleep(2000);
+        WebElement buscar10 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$txtObservaciones"));
+        buscar10.sendKeys("Paracetamol");
+        Thread.sleep(2000);
+        WebElement buscar11 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnRegistrar"));
         buscar11.click();
         Thread.sleep(1000);
-        WebElement buscar4 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnBuscarHorario"));
-        buscar4.click();
-        Thread.sleep(1000);
-        WebElement buscar5 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$grdHorariosAtencion$ctl02$chkSeleccionar"));
-        buscar5.click();
-        Thread.sleep(1000);
-        WebElement buscar12 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnBuscar"));
-        buscar12.click();
-        Thread.sleep(1000);
-        
-        WebElement buscar6 = driver.findElement(By.name("ctl00$ContentPlaceHolder1$btnReservarCita"));
-
-        buscar6.click();
-
-        Thread.sleep(1000);
-        
-        
         
     }
     @After
